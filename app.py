@@ -2,21 +2,18 @@ from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
-# Mot de passe en dur
-PASSWORD = "JaiCompris"
+import random
 
 @app.route("/")
 def index():
     return render_template("index.html")
 
-@app.route("/check-password", methods=["POST"])
-def check_password():
-    data = request.get_json()
-    user_input = data.get("password", "")
-    if user_input == PASSWORD:
-        return jsonify({"result": "Bravo ! Mot de passe correct."})
-    else:
-        return jsonify({"result": "Mot de passe incorrect."})
+@app.route( methods=["POST"])
+def get1():
+    values = ['bbleu', 'bjaune', 'brouge', 'bverte','bnoir','bblanche']
+    probabilities = [0.1, 0.01, 0.2, 0.6, 0,045, 0,045]
+    chosen_value = random.choices(values, weights=probabilities, k=1)[0]
+        return jsonify(chosen_value)
 
 if __name__ == "__main__":
     app.run(debug=True)
