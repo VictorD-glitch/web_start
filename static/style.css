@@ -73,6 +73,6 @@ button:hover {
 }
 
 #shop {
-    background-image: url('./images/key.png');
+    background-image: url('shopping-cart.png');
     background-repeat: no-repeat;
 }
