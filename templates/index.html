@@ -2,17 +2,18 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <title>Goat</title>
+    <title>Banane</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 <body>
     <div class="container">
-        <h1>Prout</h1>
-        <input type="text" id="passwordInput" placeholder="Entrez le mot de passe" />
-        <button id="submitBtn">Valider</button>
-        <p id="response"></p>
+        <h1>Cliques pour recevoir une banane:</h1>
+        <button id="Bananeclique">Confirmer</button>
+        <p id="timer"></p>
     </div>
-
+    <div>
+        <input type='button' id='shop'/>
+    </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
