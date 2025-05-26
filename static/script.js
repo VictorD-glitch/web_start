@@ -1,6 +1,4 @@
-document.getElementById("submitBtn").addEventListener("click", () => {
-  const password = document.getElementById("passwordInput").value;
-
+document.getElementById("Bananeclique").addEventListener("click", () => {
   // Envoi la requête POST au backend Python
   fetch("/check-password", {
     method: "POST",
