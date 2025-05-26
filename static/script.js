@@ -11,7 +11,19 @@ document.getElementById("Bananeclique").addEventListener("click", () => {
     headers: { "Content-Type": "application/json" },
   })
     .then((response) => response.json())
-    .then(if(
+    .then(if(response==bbleue){
+          bbleue = bbleue+
+            }elif(response==brouge){
+          brouge = brouge+1
+            }elif(response==bjaune){
+          bjaune = bjaune+1
+            }elif(response==bverte){
+          bverte = bverte+1
+            }elif(response==bblanche){
+          bblanche = bblanche+1
+            }elif(response==bnoire){
+          bnoire = bnoire+1
+            }
     .then((data) => {
       document.getElementById("response").textContent = data.result;
     })
