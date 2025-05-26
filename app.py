@@ -10,7 +10,7 @@ def index():
 
 @app.route( methods=["POST"])
 def get1():
-    values = ['bbleu', 'bjaune', 'brouge', 'bverte','bnoir','bblanche']
+    values = ['bbleue', 'bjaune', 'brouge', 'bverte','bnoire','bblanche']
     probabilities = [0.1, 0.01, 0.2, 0.6, 0,045, 0,045]
     chosen_value = random.choices(values, weights=probabilities, k=1)[0]
         return jsonify(chosen_value)
